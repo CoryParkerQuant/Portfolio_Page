@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Strategy Name] - Cory Parker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            background-color: #34495e;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 1rem 0;
+            transition: background-color 0.3s;
+        }
+
+        .back-link:hover {
+            background-color: #2c3e50;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .content h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .content h3 {
+            color: #34495e;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .content p {
+            margin-bottom: 1rem;
+        }
+
+        .images-section {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .images-section h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .image-container {
+            margin-bottom: 2rem;
+        }
+
+        .image-container h3 {
+            color: #34495e;
+            margin-bottom: 0.5rem;
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 4px;
+            border: 2px solid #ddd;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.02);
+            border-color: #3498db;
+        }
+
+        /* Lightbox styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 95%;
+            max-height: 95%;
+            border-radius: 4px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>[Strategy Name]</h1>
+        <p>Systematic Trading Strategy</p>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+
+        <!-- Strategy Description -->
+        <div class="content">
+            <h2>Strategy Overview</h2>
+            <p>
+                [Describe what this strategy does. What market(s) does it trade? What timeframe? 
+                Long or short or both? What type of strategy is it (trend, mean reversion, breakout, etc.)?]
+            </p>
+
+            <h3>Logic & Design</h3>
+            <p>
+                [Explain the core logic behind this strategy. What indicators or signals does it use? 
+                What entry conditions? What exit conditions? What made you develop this particular approach?]
+            </p>
+
+            <h3>Key Characteristics</h3>
+            <p>
+                [Share important details about the strategy. Trade frequency? Average hold time? 
+                Typical position size? Win rate? Any unique features or considerations?]
+            </p>
+
+            <h3>Performance Notes</h3>
+            <p>
+                [Share your observations about how the strategy has performed. What are its strengths? 
+                What conditions does it perform best in? Any weaknesses or challenges? 
+                How does it complement other strategies in your portfolio?]
+            </p>
+        </div>
+
+        <!-- Performance Images -->
+        <div class="images-section">
+            <h2>Performance Results</h2>
+            
+            <div class="image-container">
+                <h3>Backtest Performance</h3>
+                <img src="images/[strategy-name]-backtest.png" alt="Backtest Results" onclick="openLightbox(this.src)">
+            </div>
+
+            <div class="image-container">
+                <h3>Live Trading Performance</h3>
+                <img src="images/[strategy-name]-live.png" alt="Live Performance" onclick="openLightbox(this.src)">
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Full size image">
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Cory Parker | For Educational Purposes</p>
+    </footer>
+
+    <script>
+        function openLightbox(src) {
+            document.getElementById('lightbox').style.display = 'flex';
+            document.getElementById('lightbox-img').src = src;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
