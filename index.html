@@ -29,109 +29,65 @@
             margin-bottom: 0.5rem;
         }
 
-        nav {
-            background-color: #34495e;
-            padding: 1rem;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            margin: 0 0.5rem;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-
-        nav a:hover {
-            background-color: #2c3e50;
-        }
-
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 2rem auto;
             padding: 0 1rem;
         }
 
-        .strategy {
+        .section {
             background-color: white;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
-        .strategy h2 {
+        .section h2 {
             color: #2c3e50;
             margin-bottom: 1rem;
             padding-bottom: 0.5rem;
             border-bottom: 2px solid #3498db;
         }
 
-        .strategy h3 {
-            color: #34495e;
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .strategy p {
+        .section p {
             margin-bottom: 1rem;
         }
 
-        .image-gallery {
+        .strategies-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
         }
 
-        .image-gallery img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: transform 0.3s;
+        .strategy-card {
+            background-color: white;
             border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: #333;
+            display: block;
         }
 
-        .image-gallery img:hover {
-            transform: scale(1.05);
+        .strategy-card:hover {
+            transform: translateY(-5px);
             border-color: #3498db;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
-        /* Lightbox styles */
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.9);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
+        .strategy-card h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
         }
 
-        .lightbox img {
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 4px;
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: 20px;
-            right: 40px;
-            color: white;
-            font-size: 40px;
-            cursor: pointer;
-            font-weight: bold;
+        .strategy-card p {
+            color: #666;
+            font-size: 0.9rem;
+            margin: 0;
         }
 
         footer {
@@ -149,117 +105,139 @@
         <p>Systematic Trading Strategies - Backtests & Live Performance</p>
     </header>
 
-    <nav>
-        <a href="#strategy1">Strategy 1</a>
-        <a href="#strategy2">Strategy 2</a>
-        <a href="#strategy3">Strategy 3</a>
-    </nav>
-
     <div class="container">
-        <!-- Strategy 1 -->
-        <section id="strategy1" class="strategy">
-            <h2>Strategy 1: [Your Strategy Name]</h2>
-            
-            <h3>Overview</h3>
+        <!-- Philosophy Section -->
+        <section class="section">
+            <h2>Trading Philosophy & Approach</h2>
             <p>
-                Describe your strategy here. What market does it trade? What timeframe? 
-                What's the core logic behind it?
+                [Describe your overall approach to systematic trading here. What's your philosophy? 
+                Why do you use multiple strategies? How do you think about markets? What makes your 
+                approach different or unique?]
             </p>
-
-            <h3>Design & Logic</h3>
             <p>
-                Explain your thinking. What indicators or signals do you use? 
-                What made you develop this approach?
+                [Add more paragraphs as needed to explain your systematic approach, why diversification 
+                across strategies matters to you, and your general market beliefs.]
             </p>
-
-            <h3>Performance</h3>
-            <p>
-                Share key metrics or observations about backtest and live results.
-            </p>
-
-            <div class="image-gallery">
-                <img src="images/your-image1.png" alt="Backtest Results" onclick="openLightbox(this.src)">
-                <img src="images/your-image2.png" alt="Live Performance" onclick="openLightbox(this.src)">
-                <img src="images/your-image3.png" alt="Equity Curve" onclick="openLightbox(this.src)">
-            </div>
         </section>
 
-        <!-- Strategy 2 -->
-        <section id="strategy2" class="strategy">
-            <h2>Strategy 2: [Your Strategy Name]</h2>
-            
-            <h3>Overview</h3>
+        <!-- Risk Management Section -->
+        <section class="section">
+            <h2>Risk Management & Position Sizing</h2>
             <p>
-                Describe your second strategy here.
+                [Explain your position sizing methodology. Do you use fixed fractional? Equal dollar weighting? 
+                Volatility-based sizing? How do you determine position sizes across your strategies?]
             </p>
-
-            <h3>Design & Logic</h3>
             <p>
-                Explain the thinking behind this strategy.
+                [Describe your risk controls. Maximum drawdown limits? Stop losses? Portfolio heat? 
+                How do you manage risk at the portfolio level across multiple strategies?]
             </p>
-
-            <h3>Performance</h3>
-            <p>
-                Share results and observations.
-            </p>
-
-            <div class="image-gallery">
-                <img src="images/strategy2-image1.png" alt="Backtest Results" onclick="openLightbox(this.src)">
-                <img src="images/strategy2-image2.png" alt="Live Performance" onclick="openLightbox(this.src)">
-            </div>
         </section>
 
-        <!-- Strategy 3 -->
-        <section id="strategy3" class="strategy">
-            <h2>Strategy 3: [Your Strategy Name]</h2>
-            
-            <h3>Overview</h3>
+        <!-- Strategies Section -->
+        <section class="section">
+            <h2>Strategy Portfolio</h2>
             <p>
-                Describe your third strategy here.
+                Below are the 18 systematic strategies that comprise my trading portfolio. Each strategy 
+                has been backtested and many are currently trading live. Click any strategy to view detailed 
+                performance metrics and charts.
             </p>
 
-            <h3>Design & Logic</h3>
-            <p>
-                Explain the thinking behind this strategy.
-            </p>
+            <div class="strategies-grid">
+                <a href="some-weather-combo.html" class="strategy-card">
+                    <h3>Some Weather Combo</h3>
+                    <p>Brief description of this strategy approach and market focus.</p>
+                </a>
 
-            <h3>Performance</h3>
-            <p>
-                Share results and observations.
-            </p>
+                <a href="snp-trend.html" class="strategy-card">
+                    <h3>S&P Trend</h3>
+                    <p>Brief description of this strategy approach and market focus.</p>
+                </a>
 
-            <div class="image-gallery">
-                <img src="images/strategy3-image1.png" alt="Backtest Results" onclick="openLightbox(this.src)">
+                <a href="rsi16-mr.html" class="strategy-card">
+                    <h3>RSI16 Mean Reversion</h3>
+                    <p>Brief description of this strategy approach and market focus.</p>
+                </a>
+
+                <a href="slope-mr.html" class="strategy-card">
+                    <h3>Slope Mean Reversion</h3>
+                    <p>Brief description of this strategy approach and market focus.</p>
+                </a>
+
+                <a href="rsi2-mr.html" class="strategy-card">
+                    <h3>RSI2 Mean Reversion</h3>
+                    <p>Brief description of this strategy approach and market focus.</p>
+                </a>
+
+                <a href="zrsi.html" class="strategy-card">
+                    <h3>ZRSI</h3>
+                    <p>Brief description of this strategy approach and market focus.</p>
+                </a>
+
+                <a href="dc-bo.html" class="strategy-card">
+                    <h3>Donchian Channel Breakout</h3>
+                    <p>Brief description of this strategy approach and market focus.</p>
+                </a>
+
+                <a href="quick-down.html" class="strategy-card">
+                    <h3>Quick Down</h3>
+                    <p>Brief description of this strategy approach and market focus.</p>
+                </a>
+
+                <a href="quick-drop.html" class="strategy-card">
+                    <h3>Quick Drop</h3>
+                    <p>Brief description of this strategy approach and market focus.</p>
+                </a>
+
+                <a href="rev-marcel.html" class="strategy-card">
+                    <h3>Rev Marcel</h3>
+                    <p>Brief description of this strategy approach and market focus.</p>
+                </a>
+
+                <a href="bo-wtrlstp.html" class="strategy-card">
+                    <h3>Breakout with Trailing Stop</h3>
+                    <p>Brief description of this strategy approach and market focus.</p>
+                </a>
+
+                <a href="simple-trend.html" class="strategy-card">
+                    <h3>Simple Trend</h3>
+                    <p>Brief description of this strategy approach and market focus.</p>
+                </a>
+
+                <a href="simple-ob.html" class="strategy-card">
+                    <h3>Simple Overbought</h3>
+                    <p>Brief description of this strategy approach and market focus.</p>
+                </a>
+
+                <a href="urty-bband.html" class="strategy-card">
+                    <h3>URTY Bollinger Bands</h3>
+                    <p>Brief description of this strategy approach and market focus.</p>
+                </a>
+
+                <a href="crypto-bband.html" class="strategy-card">
+                    <h3>Crypto Bollinger Bands</h3>
+                    <p>Brief description of this strategy approach and market focus.</p>
+                </a>
+
+                <a href="crypto-slope-mr.html" class="strategy-card">
+                    <h3>Crypto Slope Mean Reversion</h3>
+                    <p>Brief description of this strategy approach and market focus.</p>
+                </a>
+
+                <a href="short-vol.html" class="strategy-card">
+                    <h3>Short Volatility</h3>
+                    <p>Brief description of this strategy approach and market focus.</p>
+                </a>
+
+                <a href="gistm.html" class="strategy-card">
+                    <h3>GISTM</h3>
+                    <p>Brief description of this strategy approach and market focus.</p>
+                </a>
             </div>
         </section>
-    </div>
-
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-        <span class="lightbox-close">&times;</span>
-        <img id="lightbox-img" src="" alt="Full size image">
     </div>
 
     <footer>
-        <p>&copy; 2024 My Trading Portfolio | For Educational Purposes</p>
+        <p>&copy; 2024 Cory Parker | For Educational Purposes</p>
     </footer>
-
-    <script>
-        function openLightbox(src) {
-            document.getElementById('lightbox').style.display = 'flex';
-            document.getElementById('lightbox-img').src = src;
-        }
-
-        function closeLightbox() {
-            document.getElementById('lightbox').style.display = 'none';
-        }
-
-        // Close lightbox with Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeLightbox();
-            }
-        });
-    </script>
 </body>
 </html>
