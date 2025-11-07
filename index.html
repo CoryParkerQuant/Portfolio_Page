@@ -118,13 +118,13 @@
             <p>
                 When an idea for a strategy comes to me, whether from reading a paper,
                 seeing it in forum, hearing it on a podcast, reading it in a book, 
-                seeing it on YouTube, my first though is, "That sounds like a good coding challenge!"<br>
+                seeing it on YouTube, my first though is, "That sounds like an interesting coding challenge!"<br>
                 While I'm coding, I get a deeper understanding of what market weakness is being exploited.
-                This then leads me to be aware of the ways it could be over-fit. Which leads me to 
+                This then leads me to be aware of the ways in-which it could easily become over-fit. Which leads me to 
                 parameter selection.<br>
-                If optimization is necessary, I will use RealTest to show me the range of parameter 
+                If optimization is necessary, I will use RealTest to show me the range of parameters in Trade Count, 
                 Net Profit, ROR, MaxDD, MAR, Expectancy. Then I will attempt to use 
-                the middle of the flattest range.
+                the robust middle of the flattest range. 
             </p>
             <p>
                What I like is that in this is an art form. This is very much programmed discretion but the
@@ -138,8 +138,8 @@
             <h2>Risk Management & Position Sizing</h2>
             <p>
                 For me, risk management starts with the question, "What instrument is being traded?"<br>
-                Cooperate risk is no joke. I don't hold any single stocks unless it's a risk-defined Option strategy.<br>
-                I base my positions using the portfolio's closed-trade-equity x risk amount x ATR(5)
+                Cooperate risk is no joke. I don't hold any single stocks and I don't use strategies that trade single stocks.<br>
+                I base my positions using the portfolio's closed-trade-equity x risk amount / ATR(5)
                 and total position size does not exceed 5% of the overall portfolio.<br>
                 VIX spikes are also considered when opening new positions.<br>
                 Position sizes are calculated the same for every system.
@@ -147,6 +147,20 @@
             <p>
                 Some systems have stops in the market, while others do not.<br> 
                 Orders are generated daily, after the market close, and resting orders are placed with the broker.
+            </p>
+        </section>
+
+             <!-- Tools and Data Section -->
+        <section class="section">
+            <h2>Tools and Data</h2>
+            <p>
+                I started trading in 2021 using a piece of paper with a list of stocks.<br>
+                Quickly moved to Excel/Google Sheets and free data from yahoo in 2022.<br>
+                In fall 2023, Marsten Parker appeared on Mike Covel's podcast. I checked out RealTest
+                and signed up in October along with Norgate Data.<br>
+                The great thing about RealTest and Norgate is <i>speed</i>!<br>
+                I can formulate and test a system in RealTest before I could even load and clean Yahoo data in Excel.<br>
+                I've built a few systems in Python but, honestly, RealTest has me spoiled for system development and daily order generation.
             </p>
         </section>
 
@@ -162,7 +176,8 @@
             <div class="strategies-grid">
                 <a href="some-weather-combo.html" class="strategy-card">
                     <h3>Some Weather Combo</h3>
-                    <p>You've heard of the All Weather Portfolio. Well this only Some Weather!</p>
+                    <p>You've heard of the All Weather Portfolio.<br>
+                       Well this is only Some Weather!</p>
                 </a>
 
                 <a href="snp-trend.html" class="strategy-card">
