@@ -1,4 +1,4 @@
-age<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -152,7 +152,7 @@ age<!DOCTYPE html>
 </head>
 <body>
     <header>
-        <h1>Coming Soon</h1>
+        <h1>Slope MR</h1>
             <hr style="width: 40%; margin: auto;" color=white>
         <p>Systematic Trading Strategy</p>
     </header>
@@ -164,22 +164,29 @@ age<!DOCTYPE html>
         <div class="content">
             <h2>Strategy Overview</h2>
             <p>
-              Under Construction
+              I'm actually not very fond of mean reversion strategies. And that's why I have so many of them.<br>
+            They all take really small positions but together, they pull their weight.<br>
+            I also will keep them in the testing phase a bit longer than most other strategies.<br>
+            But in order to be diversified, I believe it's important to have Mean Reversion in the portfolio.
             </p>
 
             <h3>Logic & Design</h3>
             <p>
-              Under Construction
+              Slope MR simply measures the slope of the closes for the past few bars
+            and looks to take a quick profit at the beginning of an up swing.<br>
+            Slope MR only trades TQQQ.
             </p>
 
             <h3>Key Characteristics</h3>
             <p>
-              Under Construction
+              Slope MR is meant to be a quick mean reversion strategy.<br>
+            The back tested model had a Win Rate of 64% and the average trade length was 2 days.
             </p>
 
             <h3>Performance Notes</h3>
             <p>
-              Under Construction
+              Slope MR has only been live for a few months, so live data is lacking at the moment.<br>
+            Back tested Portfolio correlation is 0.40
             </p>
         </div>
 
@@ -189,12 +196,12 @@ age<!DOCTYPE html>
             
             <div class="image-container">
                 <h3>Backtest Performance</h3>
-                <img src=" oops " alt="Backtest Results" onclick="openLightbox(this.src)">
+                <img src="images/SlopeMRBacktest.png" alt="Backtest Results" onclick="openLightbox(this.src)">
             </div>
 
             <div class="image-container">
                 <h3>Live Trading Performance</h3>
-                <img src=" oops " alt="Live Performance" onclick="openLightbox(this.src)">
+                <img src="SlopeMRLive.png" alt="Live Performance" onclick="openLightbox(this.src)">
             </div>
         </div>
     </div>
