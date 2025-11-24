@@ -116,20 +116,18 @@
         <section class="section">
             <h2>Strategy Development Philosophy & Approach</h2>
             <p>
-                When an idea for a strategy comes to me, whether from reading a paper,
-                seeing it in forum, hearing it on a podcast, reading it in a book, 
-                seeing it on YouTube, my first though is, "That sounds like an interesting coding challenge!"<br>
-                While I'm coding, I get a deeper understanding of what market weakness is being exploited.
-                This then leads me to be aware of the ways in-which it could easily become over-fit. Which leads me to 
-                parameter selection.<br>
-                If optimization is necessary, I will use RealTest to show me the range of parameters in Trade Count, 
-                Net Profit, ROR, MaxDD, MAR, Expectancy. Then I will attempt to use 
-                the robust middle of the flattest range. 
-            </p>
-            <p>
-               This programmed discretion is very much a form of art but the
-               decision's are made from what was seen in the backtest, not from guessing.<br>
-               <b><i>Doctors don't perform surgery before studying all the data.</i></b>
+                My strategy development process begins with curiosity.<br>
+             When I encounter a promising idea—whether from academic research, trading forums, podcasts, books, or educational
+             content—my immediate reaction is: "That's an interesting coding challenge!"<br>
+             This hands-on approach serves a purpose beyond implementation; coding forces me to understand the underlying market
+             inefficiency being exploited at a granular level.<br><br>
+             This deeper understanding naturally reveals potential pitfalls, particularly the risk of overfitting.
+             When optimization is required, I leverage RealTest to analyze parameter sensitivity across multiple dimensions:
+             Trade Count, Net Profit, Rate of Return, Maximum Drawdown, MAR Ratio, and Expectancy. My goal is to identify the robust middle ground—the flattest,
+             most stable parameter ranges that suggest genuine edge rather than curve-fitted results.<br><br>
+             This approach combines systematic rigor with informed discretion. Every decision is data-driven,
+             grounded in what the backtest reveals rather than speculation. Just as physicians study diagnostics before operating,
+             I believe traders must thoroughly understand their systems before deploying capital. 
             </p>
         </section>
 
@@ -137,16 +135,14 @@
         <section class="section">
             <h2>Risk Management & Position Sizing</h2>
             <p>
-                For me, risk management starts with the question, "What instrument is being traded?"<br>
-                Cooperate risk is no joke. I don't hold any single stocks and I don't use strategies that trade single stocks.<br>
-                I base my positions using the portfolio's closed-trade-equity x risk amount / ATR(5)
-                and total position size does not exceed 5% of the overall portfolio.<br>
-                VIX spikes are also considered when opening new positions.<br>
-                Position sizes are calculated the same for every system.
-            </p>
-            <p>
-                Some systems have stops in the market, while others do not.<br> 
-                Orders are generated daily, after the market close, and resting orders are placed with the broker.
+                My risk management framework begins with a fundamental question: "What instrument am I trading?" Corporate-specific risk is substantial,
+             which is why I avoid individual stock positions entirely and focus exclusively on strategies that trade diversified instruments.<br><br>
+             Position sizing follows a consistent formula across all systems: (Portfolio Closed Trade Equity × Risk Percentage) / ATR(5).
+             I maintain strict limits, capping total position size at 5% of overall portfolio value. I also monitor VIX levels when initiating new positions,
+             adjusting exposure during elevated volatility regimes.<br><br>
+             Stop-loss approaches vary by system—some utilize market-based stops while others employ different exit mechanisms.
+             All orders are generated after market close each day, with resting orders placed directly with my broker.
+             This systematic process ensures consistency and removes emotional decision-making from execution.
             </p>
         </section>
 
@@ -154,16 +150,40 @@
         <section class="section">
             <h2>Tools and Data</h2>
             <p>
-                I started trading in 2021 using a piece of paper with a list of stocks.<br>
-                Quickly moved to Excel/Google Sheets and free data from yahoo in 2022.<br>
-                In fall 2023, Marsten Parker appeared on Mike Covel's podcast. I checked out RealTest
-                and signed up in October along with Norgate Data.<br>
-                The great thing about RealTest and Norgate is <i>speed!</i><br>
-                I can formulate and test a system in RealTest before I could even load and clean Yahoo data in Excel.<br>
-                I've built a few systems in Python but, honestly, RealTest has me spoiled for system development and daily order generation.
+                My trading evolution reflects a practical progression toward efficiency. I began in 2021 with paper-based tracking, quickly
+             transitioning to Excel/Google Sheets with Yahoo Finance data in 2022. The turning point came in fall 2023 when Marsten Parker's
+             appearance on Mike Covel's podcast introduced me to RealTest.<br><br>
+             Since subscribing to RealTest and Norgate Data in October 2023, my development workflow has transformed dramatically.
+             The combination delivers exceptional speed—I can now design, test, and validate a complete trading system in RealTest faster than
+             I could previously load and clean Yahoo data in Excel. While I've built systems in Python, RealTest's efficiency and purpose-built
+             design have become indispensable for both strategy development and daily order generation.
             </p>
         </section>
 
+        <!-- background -->
+        <section class="section">
+            <h2>Professional Background & Transferable Skills</h2>
+            <p>
+               While I don't hold a PhD in mathematics, I bring something equally valuable to algorithmic strategy development:
+             thousands of hours solving complex problems where precision is non-negotiable. My background in auto collision repair has
+             instilled a systematic, detail-oriented approach that translates directly to quantitative trading.<br><br>
+            More importantly, this field has made me an expert communicator of technical complexity—a skill where many quants struggle.
+             Daily, I translate intricate technical analysis into clear, compelling explanations for non-technical audiences: insurance
+             adjusters evaluating repair costs, vehicle owners making coverage decisions, and shop managers coordinating resources.
+             I don't just understand the technical details; I can explain why they matter in terms stakeholders actually care about.<br><br>
+            This communication strength directly addresses a critical gap in quantitative trading. A brilliant strategy is worthless if you can't
+             articulate its logic to investors, explain its risk profile to partners, or justify its approach to decision-makers.
+             I excel at distilling complex systematic approaches into narratives that resonate—explaining not just what a strategy does,
+             but why it works, what market conditions favor it, and how it fits within a broader portfolio context.<br><br>
+            The technical rigor from collision repair reinforces this advantage. In that field, the margin for error is zero—a misalignment
+             of millimeters compounds into structural failure. This environment taught me to think in systems, identify dependencies,
+             and validate assumptions before execution. I learned that shortcuts create compounding problems, a principle I apply
+             directly to systematic trading through thorough testing, conservative parameter selection, and disciplined risk management.<br><br>
+            The combination is powerful: technical precision paired with the ability to make complex ideas accessible.
+             In an industry where quants often struggle to explain their work beyond technical audiences, I bridge that gap naturally.
+            </p>
+        </section>
+     
         <!-- Strategies Section -->
         <section class="section">
             <h2>Strategy Portfolio</h2>
