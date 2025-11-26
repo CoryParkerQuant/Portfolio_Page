@@ -150,9 +150,42 @@
             padding: 1rem;
             margin-top: 3rem;
         }
+        /* Back Button Styles */
+.back-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.back-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .back-button {
+        top: 15px;
+        right: 15px;
+        padding: 10px 14px;
+    }
+}
     </style>
 </head>
 <body>
+    <a href="index.html" class="back-button">← Back to Portfolio</a>
     <header>
         <h1>Cory’s “Defense First”</h1>
             <hr style="width: 40%; margin: auto;" color=white>
@@ -160,7 +193,6 @@
     </header>
 
     <div class="container">
-        <a href="index.html" class="back-link">← Back to Portfolio</a>
 
         <!-- Strategy Description -->
         <div class="content">
@@ -217,7 +249,6 @@
         </div>
     </div>
     <div class="container">
-        <a href="index.html" class="back-link">← Back to Portfolio</a>
     </div>
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox" onclick="closeLightbox()">
@@ -226,7 +257,7 @@
     </div>
 
 <footer>
-    <p>&copy; 2025 Cory Parker | <a href="mailto:coryondrums@yahoo.com" style="color: #3498db;">Contact</a> | For Educational Purposes</p>
+    <p>&copy; 2025 Cory Parker | <a href="https://www.linkedin.com/in/cory-parker-511837380/" target="_blank" style="color: #3498db;">LinkedIn Profile</a> | <a href="mailto:coryondrums@yahoo.com" style="color: #3498db;">Contact</a> | For Educational Purposes</p>
 </footer>
 
     <script>
