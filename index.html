@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -97,9 +97,86 @@
             padding: 1rem;
             margin-top: 3rem;
         }
+
+        /* Navigation Menu Styles */
+        .nav-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+        }
+
+        .nav-toggle:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+
+        .nav-menu {
+            position: fixed;
+            top: 70px;
+            right: 20px;
+            z-index: 999;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            padding: 1rem;
+            display: none;
+            min-width: 200px;
+        }
+
+        .nav-menu.active {
+            display: block;
+        }
+
+        .nav-menu a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #2c3e50;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.2s;
+            font-weight: 500;
+        }
+
+        .nav-menu a:hover {
+            background-color: #ecf0f1;
+            color: #3498db;
+            padding-left: 1.25rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-toggle {
+                top: 15px;
+                right: 15px;
+                padding: 10px 14px;
+            }
+        }
     </style>
 </head>
 <body>
+
+<!-- Navigation Toggle Button -->
+<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰ Menu</button>
+
+<!-- Navigation Menu -->
+<nav class="nav-menu" id="navMenu">
+    <a href="#philosophy">Philosophy</a>
+    <a href="#risk-management">Risk Management</a>
+    <a href="#tools">Tools & Data</a>
+    <a href="#background">Background</a>
+    <a href="#strategies">Strategies</a>
+    <a href="#other">Other Accounts</a>
+</nav>
+
 <header>
     <div style="display: flex; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 1rem;">
         <img src="images/Tara_Me_Beach.jpg" alt="Cory" style="height: 80px; margin-right: 2rem;">
@@ -110,10 +187,10 @@
         </div>
     </div>
 </header>
-
+ 
     <div class="container">
         <!-- Philosophy Section -->
-        <section class="section">
+        <section class="section" id="philosophy">
             <h2>Strategy Development Philosophy & Approach</h2>
             <p>
                 My strategy development process begins with curiosity.<br>
@@ -132,7 +209,7 @@
         </section>
 
         <!-- Risk Management Section -->
-        <section class="section">
+        <section class="section" id="risk-management">
             <h2>Risk Management & Position Sizing</h2>
             <p>
                 My risk management framework begins with a fundamental question: "What instrument am I trading?" Corporate-specific risk is substantial,
@@ -147,7 +224,7 @@
         </section>
 
              <!-- Tools and Data Section -->
-        <section class="section">
+        <section class="section" id="tools">
             <h2>Tools and Data</h2>
             <p>
                 My trading evolution reflects a practical progression toward efficiency. I began in 2021 with paper-based tracking, quickly
@@ -161,7 +238,7 @@
         </section>
 
         <!-- background -->
-        <section class="section">
+        <section class="section" id="background">
             <h2>Professional Background & Transferable Skills</h2>
             <p>
                While I don't hold a PhD in mathematics, I bring something equally valuable to algorithmic strategy development:
@@ -185,7 +262,7 @@
         </section>
      
         <!-- Strategies Section -->
-        <section class="section">
+        <section class="section" id="strategies">
             <h2>Strategy Portfolio</h2>
             <p>
                 Below are the 18 systematic strategies that comprise my trading portfolio. Each strategy 
@@ -291,9 +368,9 @@
                 </a>
             </div>
         </section>
-
+     
         <!-- Other Accounts and Strategies Section -->
-        <section class="section">
+        <section class="section" id="other">
             <h2>Other Accounts and Strategies</h2>
             <p>
                 These are strategies that I'm either managing or testing.
@@ -312,5 +389,42 @@
 <footer>
     <p>&copy; 2025 Cory Parker | <a href="https://www.linkedin.com/in/cory-parker-511837380/" target="_blank" style="color: #3498db;">LinkedIn Profile</a> | <a href="mailto:coryondrums@yahoo.com" style="color: #3498db;">Contact</a> | For Educational Purposes</p>
 </footer>
+
+<script>
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    const navLinks = navMenu.querySelectorAll('a');
+
+    // Toggle menu open/close
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link and smooth scroll
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            navMenu.classList.remove('active');
+            
+            const targetId = link.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+            navMenu.classList.remove('active');
+        }
+    });
+</script>
+
 </body>
 </html>
